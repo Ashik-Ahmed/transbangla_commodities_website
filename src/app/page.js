@@ -181,7 +181,7 @@ export default function Home() {
             <span className="block">Contact us today.</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-gray-900">
-            Let's discuss how Transbangla Commodities can help your business thrive in the global market.
+            Let&apos;s discuss how Transbangla Commodities can help your business thrive in the global market.
           </p>
           <Link href="/contact" className="mt-8 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-300">
             Contact Us
