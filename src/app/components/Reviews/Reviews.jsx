@@ -45,10 +45,10 @@ const ClientReviews = () => {
                         Why Customers Love To Working With Us
                     </motion.h2>
                     <motion.button
-                        className="bg-blue-500 text-white font-semibold py-3 px-6 rounded-full flex items-center hover:bg-yellow-400 transition-colors duration-300"
+                        className="bg-blue-500 text-white font-semibold py-3 px-6 rounded-full flex items-center hover:bg-blue-600 transition-colors duration-300"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.4 }}
+                        transition={{ duration: 0.2, delay: 0 }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
@@ -56,19 +56,21 @@ const ClientReviews = () => {
                         <ArrowRight className="ml-2 h-5 w-5" />
                     </motion.button>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-32 md:gap-8">
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
-                            className="relative bg-gray-200 p-6 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                            className="relative bg-gray-200 p-6 rounded-lg hover:bg-gray-100 transition-colors duration-300 group"
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                            transition={{ duration: 0.4, delay: 0 + index * 0.1 }}
                             whileHover={{ y: -5 }}
                         >
-                            <div className="absolute -top-4 left-40 text-blue-500 text-6xl mb-4"><Quote /></div>
+                            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-blue-500 rounded-md p-1 text-6xl mb-4 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                                <Quote size={40} />
+                            </div>
                             <p className="text-gray-400 mb-6">{testimonial.text}</p>
-                            <div className="absolute -bottom-18 left-24">
+                            <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 translate-y-1/2">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.name}
