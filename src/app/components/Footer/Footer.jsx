@@ -29,10 +29,10 @@ const Footer = () => {
                                         <Link href="/contact" className="text-base hover:text-gray-300 transition-colors">Contact Us</Link>
                                     </li>
                                     <li>
-                                        <Link href="/privacy" className="text-base hover:text-gray-300 transition-colors">Privacy Policy</Link>
+                                        <Link href="/" className="text-base hover:text-gray-300 transition-colors">Privacy Policy</Link>
                                     </li>
                                     <li>
-                                        <Link href="/terms" className="text-base hover:text-gray-300 transition-colors">Terms of Service</Link>
+                                        <Link href="/" className="text-base hover:text-gray-300 transition-colors">Terms of Service</Link>
                                     </li>
                                 </ul>
                             </div>
