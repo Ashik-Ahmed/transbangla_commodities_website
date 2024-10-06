@@ -122,13 +122,29 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Core Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ServiceCard
+          <div className='flex justify-between items-center mb-12'>
+            <div className="w-1/3"></div>
+            <h2 className="text-3xl font-extrabold text-gray-900 text-center w-1/3">Core Services</h2>
+            <div className="w-1/3 flex justify-end">
+              <motion.button
+                className="bg-blue-500 text-white font-semibold py-3 px-6 rounded-full flex items-center hover:bg-blue-600 transition-colors duration-300"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link href="/services">VIEW ALL SERVICES</Link>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </motion.button>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* <ServiceCard
               icon={<Ship className="h-12 w-12 text-blue-600 group-hover:text-white" />}
-              title="Trading"
+              title="Trading & Indenting"
               description="Expert commodity trading services across global markets."
-            />
+            /> */}
             <ServiceCard
               icon={<Globe className="h-12 w-12 text-blue-600 group-hover:text-white" />}
               title="Business Development"
@@ -171,10 +187,10 @@ export default function Home() {
 
       <StatisticsSection />
 
-      <ClientReviews />
+      {/* <ClientReviews /> */}
 
       {/* CTA Section */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-blue-500 sm:text-4xl">
             <span className="block">Ready to get started?</span>

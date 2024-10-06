@@ -56,17 +56,17 @@ export default function Contact() {
                         <ContactCard
                             icon={<MapPin className="h-8 w-8 text-blue-600" />}
                             title="Our Office"
-                            content="123 Business Street, Dhaka 1000, Bangladesh"
+                            content="BTMC Bhaban (7th Floor), 7-9 Kawran Bazar, Dhaka- 1217, Bangladesh"
                         />
                         <ContactCard
                             icon={<Phone className="h-8 w-8 text-blue-600" />}
                             title="Phone"
-                            content="+880 1234 567890"
+                            content="+880-2-8189244, +880-2-8189321, +880-2-58155623"
                         />
                         <ContactCard
                             icon={<Mail className="h-8 w-8 text-blue-600" />}
                             title="Email"
-                            content="info@transbangla.com"
+                            content="info@tbcl.com.bd"
                         />
                     </div>
                 </div>

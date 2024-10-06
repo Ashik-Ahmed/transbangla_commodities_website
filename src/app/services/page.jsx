@@ -6,7 +6,7 @@ import { TrendingUp, Globe, Anchor, Users, BarChart } from 'lucide-react'
 
 const services = [
     {
-        name: "Trading",
+        name: "Trading & Indenting",
         icon: <TrendingUp className="h-12 w-12" />,
         description: "Our expert trading services leverage global networks and deep market insights to provide you with the best opportunities in commodity trading.",
         details: [
