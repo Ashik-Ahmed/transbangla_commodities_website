@@ -1,12 +1,28 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Facebook, Twitter, Linkedin, Mail } from 'lucide-react'
 
 const Footer = () => {
     return (
         <footer className="bg-blue-900 text-white">
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-                <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-                    <div className="grid grid-cols-2 gap-8 xl:col-span-2">
+                <div className="xl:grid xl:grid-cols-4 xl:gap-8">
+                    {/* Company Logo */}
+                    <div className="xl:col-span-1">
+                        <Image
+                            src="/Logo.png"
+                            alt="Transbangla Commodities Ltd Logo"
+                            width={200}
+                            height={67}
+                            className="mb-4 bg-white p-2"
+                        />
+                        <p className="text-sm text-gray-300">
+                            Transbangla Commodities Ltd. Your trusted partner in logistics and transportation.
+                        </p>
+                    </div>
+
+                    {/* Existing content */}
+                    <div className="grid grid-cols-2 gap-8 xl:col-span-2 mt-12 xl:mt-0">
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
                                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
@@ -38,7 +54,9 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-8 xl:mt-0">
+
+                    {/* Newsletter section */}
+                    <div className="mt-12 xl:mt-0">
                         <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Subscribe to our newsletter</h3>
                         <p className="mt-4 text-base text-gray-300">The latest news, articles, and resources, sent to your inbox weekly.</p>
                         <form className="mt-4 sm:flex sm:max-w-md">
@@ -50,6 +68,7 @@ const Footer = () => {
                         </form>
                     </div>
                 </div>
+
                 <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
                     <div className="flex space-x-6 md:order-2">
                         <a href="#" className="text-gray-400 hover:text-gray-300">
