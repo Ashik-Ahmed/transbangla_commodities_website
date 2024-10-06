@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <div>
           <Navbar />
         </div>
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pt-16">{children}</main>
         <Footer />
       </body>
     </html>

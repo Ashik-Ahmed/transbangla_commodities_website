@@ -170,23 +170,29 @@ const ServiceCard = ({ service, index }) => {
 export default function Services() {
     return (
         <div className="bg-gray-100 min-h-screen">
+            <section className="relative text-white bg-blue-900 py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <motion.h1
+                        className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        Our Services
+                    </motion.h1>
+
+                    <motion.p
+                        className="text-xl text-center mb-16 max-w-3xl mx-auto"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                        At Transbangla Commodities, we offer a comprehensive range of services to meet all your global trade and shipping needs. Our expertise spans across various sectors, ensuring that we can provide tailored solutions for your business.
+                    </motion.p>
+                </div>
+            </section>
             <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                <motion.h1
-                    className="text-4xl font-extrabold text-gray-900 text-center mb-12"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    Our Services
-                </motion.h1>
-                <motion.p
-                    className="text-xl text-gray-700 text-center mb-16 max-w-3xl mx-auto"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                    At Transbangla Commodities, we offer a comprehensive range of services to meet all your global trade and shipping needs. Our expertise spans across various sectors, ensuring that we can provide tailored solutions for your business.
-                </motion.p>
+
                 <div className="space-y-16">
                     {services.map((service, index) => (
                         <ServiceCard key={index} service={service} index={index} />

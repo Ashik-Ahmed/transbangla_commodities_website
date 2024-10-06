@@ -1,14 +1,14 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { Globe, Users, TrendingUp, Anchor } from 'lucide-react'
+import { Globe, Users, TrendingUp, Anchor, Lightbulb, Award } from 'lucide-react'
 import Image from 'next/image'
 
 export default function About() {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <section className="relative text-black py-24">
+            <section className="relative text-white bg-blue-900 py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.h1
                         className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center"
@@ -18,18 +18,14 @@ export default function About() {
                     >
                         About Transbangla Commodities Ltd.
                     </motion.h1>
-                    <p className="text-xl text-center max-w-3xl mx-auto">
+                    <motion.p
+                        className="text-xl text-center mb-16 max-w-3xl mx-auto"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
                         Your trusted partner in global trade, business development, and shipping services.
-                    </p>
-                </div>
-                <div className="mt-12 relative h-64 sm:h-80 md:h-96">
-                    <Image
-                        src="/mission.jpeg"
-                        alt="Transbangla Commodities Ltd."
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-lg shadow-xl"
-                    />
+                    </motion.p>
                 </div>
             </section>
 
@@ -47,57 +43,6 @@ export default function About() {
                         <p className='mt-4'>
                             While Transbangla&apos;s early success was built on importing goods such as railway equipment, raw materials, and fertilizers, the company has shifted its focus to petroleum and finished products, other commodities, and shipping services. This diversification has enabled Transbangla to become a comprehensive trader and energy solutions provider in Bangladesh.
                         </p>
-                    </div>
-                </div>
-            </section>
-
-
-            {/* Our Mission */}
-            <section className="py-16 bg-gray-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Mission</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="prose prose-lg">
-                            <p>
-                                Transbangla is committed to delivering exceptional service and value to both suppliers and buyers. The company continuously seeks to optimize processes and enhance efficiency for all parties involved, ensuring a seamless experience. This focus on customer satisfaction is reflected in the expertise of Transbangla&apos;s workforce, which spans agency operations, commercial matters, shipping, and other ancillary services.
-                            </p>
-                            <p className='mt-4'>
-                                Transbangla&apos;   s adaptability and dynamism have been key factors in its ongoing growth and success. The company is well-equipped to tackle new challenges and seize emerging opportunities in the energy sector.
-                            </p>
-                        </div>
-                        <div className="relative h-64 sm:h-80 md:h-96">
-                            <Image
-                                src="/mission.jpg"
-                                alt="Our Mission"
-                                layout="fill"
-                                objectFit="cover"
-                                className="rounded-lg shadow-xl"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            {/* Our Vision */}
-            <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Vision</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="relative h-64 sm:h-80 md:h-96 order-2 md:order-1">
-                            <Image
-                                src="/vision.jpg"
-                                alt="Our Vision"
-                                layout="fill"
-                                objectFit="cover"
-                                className="rounded-lg shadow-xl"
-                            />
-                        </div>
-                        <div className="prose prose-lg order-1 md:order-2">
-                            <p>
-                                The vision is to become a leading contributor in trading and shipping services as well as penetrating new markets through strategic partnerships and expansion.
-                            </p>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -130,6 +75,84 @@ export default function About() {
                     </div>
                 </div>
             </section>
+
+
+            {/* Our Mission */}
+            <section className="py-16 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Mission</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div className="prose prose-lg">
+                            <p>
+                                Transbangla is committed to delivering exceptional service and value to both suppliers and buyers. The company continuously seeks to optimize processes and enhance efficiency for all parties involved, ensuring a seamless experience. This focus on customer satisfaction is reflected in the expertise of Transbangla&apos;s workforce, which spans agency operations, commercial matters, shipping, and other ancillary services.
+                            </p>
+                            <p className='mt-4'>
+                                Transbangla&apos;s adaptability and dynamism have been key factors in its ongoing growth and success. The company is well-equipped to tackle new challenges and seize emerging opportunities in the energy sector.
+                            </p>
+                        </div>
+                        <div className="relative h-64 sm:h-80 md:h-96">
+                            <Image
+                                src="/mission.jpg"
+                                alt="Our Mission"
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-lg shadow-xl"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            {/* Our Vision */}
+            <section className="py-16 bg-gray-100">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">Our Vision</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div className="relative h-64 sm:h-80 md:h-96 order-2 md:order-1">
+                            <Image
+                                src="/vision.jpg"
+                                alt="Our Vision"
+                                layout="fill"
+                                objectFit="cover"
+                                className="rounded-lg shadow-xl"
+                            />
+                        </div>
+                        <div className="prose prose-lg order-1 md:order-2">
+                            <p>
+                                At Transbangla Commodities Ltd., our vision is to become a leading global force in trading and shipping services, setting new standards of excellence in the industry. We aspire to:
+                            </p>
+                            <ul className="space-y-2 list-none pl-0 my-4">
+                                <li className="flex items-start">
+                                    <Globe className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                                    <span>Expand our reach into new markets, forging strategic partnerships that drive mutual growth and success.</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <Lightbulb className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                                    <span>Innovate continuously in our services and operations, embracing cutting-edge technologies and sustainable practices.</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <Award className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                                    <span>Be recognized as the preferred partner for energy solutions, known for our reliability, efficiency, and customer-centric approach.</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <TrendingUp className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                                    <span>Contribute significantly to the economic development of Bangladesh and beyond, creating value for all our stakeholders.</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <Users className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                                    <span>Foster a culture of excellence, nurturing talent and leadership that will shape the future of the commodities and shipping industries.</span>
+                                </li>
+                            </ul>
+                            <p>
+                                We envision a future where Transbangla Commodities Ltd. is synonymous with trust, innovation, and global trade leadership, playing a pivotal role in connecting resources with needs across the world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
 
         </div>
     )
