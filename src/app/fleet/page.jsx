@@ -8,7 +8,7 @@ import Image from 'next/image'
 const ships = [
     {
         name: "MT Precious Eternal",
-        image: "/ship.jpg",
+        image: "/mt_precious_eternal.jpeg",
         description: "Our flagship vessel, MT Precious Eternal, is a state-of-the-art oil tanker designed for efficient and safe transportation of refined oil products.",
         longDescription: "MT Precious Eternal boasts a double-hull design that enhances safety and reduces the risk of oil spills. Its advanced navigation systems and fuel-efficient engines make it an environmentally friendly choice for oil transportation.",
         color: "bg-blue-500",
